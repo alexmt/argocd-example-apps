@@ -2,13 +2,10 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: helm-hooks
-  namespace: argocd
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     namespace: helm-hooks
-    server: {{ .Values.spec.destination.server }}
+    name: minikube
   project: default
   source:
     path: helm-hooks
