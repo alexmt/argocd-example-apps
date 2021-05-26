@@ -1,0 +1,113 @@
+apiVersion: v1
+kind: List
+items:
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map1}
+    data: &data
+      player_initial_lives: "3"
+      ui_properties_file_name: "user-interface.properties"
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map2}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map3}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map4}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map5}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map6}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map7}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map8}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map9}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map10}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map11}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map12}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map13}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map14}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map15}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map16}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map17}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map18}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map19}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map20}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map21}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map22}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map23}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map24}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map25}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map26}
+    data: *data
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata: {name: map27}
+    data: *data
