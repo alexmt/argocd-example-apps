@@ -4,13 +4,13 @@ metadata:
   name: before
   annotations:
     argocd.argoproj.io/hook: PreSync
-    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+    argocd.argoproj.io/hook-delete-policy: HookFailed
 spec:
   template:
     spec:
       containers:
       - name: sleep
         image: alpine:latest
-        command: ["sleep", "10"]
+        command: ["sleep", "1"]
       restartPolicy: Never
   backoffLimit: 0
