@@ -3,4 +3,4 @@ kind: Namespace
 metadata:
   name: test
   labels:
-    foo: bar
+    cost-center: 123
