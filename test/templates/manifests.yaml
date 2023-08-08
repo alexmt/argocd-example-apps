@@ -4,3 +4,4 @@ metadata:
   name: test
   labels:
     cost-center: 123
+    hermes-created: "true"
