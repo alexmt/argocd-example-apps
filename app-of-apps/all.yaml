@@ -1,13 +1,28 @@
 apiVersion: argoproj.io/v1alpha1
-kind: Application
+kind: ApplicationSet
 metadata:
-  name: guestbook
+  name: appset
   namespace: argocd
 spec:
-  destination:
-    namespace: test
-    name: laptop
-  project: default
-  source:
-    path: guestbook
-    repoURL: https://github.com/argoproj/argocd-example-apps.git
+  generators:
+  - git:
+      repoURL: https://github.com/argoproj/argocd-example-apps.git
+      revision: HEAD
+      directories:
+      - path: "**/kustomization.yaml"
+
+  template:
+    metadata:
+      name: '{{.path.basename}}'
+    spec:
+      project: "my-project"
+      source:
+        repoURL: https://github.com/argoproj/argo-cd.git
+        targetRevision: HEAD
+        path: '{{.path.path}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: '{{.path.basename}}'
+      syncPolicy:
+        syncOptions:
+        - CreateNamespace=true
