@@ -6,15 +6,15 @@ spec:
   generators:
   - list:
       elements:
-      - cluster: mycluster.com
-        url: http://laptop2:8001
+      - cluster: laptop
+        url: http://laptop:8001
   template:
     metadata:
       name: '{{cluster}}-guestbook'
     spec:
       destination:
         namespace: guestbook
-        server: '{{url}}'
+        name: '{{cluster}}'
       project: default
       source:
         path: guestbook
