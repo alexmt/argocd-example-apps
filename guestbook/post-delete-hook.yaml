@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: post-delete-hook
+  annotations:
+    argocd.argoproj.io/hook: PostDelete
 spec:
   containers:
   - name: post-delete-hook
