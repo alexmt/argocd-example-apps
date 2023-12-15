@@ -4,6 +4,7 @@ metadata:
   name: post-delete-hook
   annotations:
     argocd.argoproj.io/hook: PostDelete
+    argocd.argoproj.io/hook-delete-policy: HookFailed
 spec:
   containers:
   - name: post-delete-hook
