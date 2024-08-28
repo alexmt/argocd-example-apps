@@ -4,6 +4,6 @@ bases:
 - ../kustomize-guestbook
 
 resources:
-- pre-sync-job.yaml
-- post-sync-job.yaml
+# - pre-sync-job.yaml
+# - post-sync-job.yaml
 - app.yaml
