@@ -10,7 +10,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    name: laptop
+    name: akp-001-dev-usw2
     namespace: default
   project: test
   source:
@@ -25,7 +25,7 @@ metadata:
   namespace: test
 spec:
   destination:
-    name: laptop
+    name: akp-001-dev-usw2
     namespace: default
   project: test
   source:
