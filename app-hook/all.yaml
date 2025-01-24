@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hello
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hook
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  project: default
+  source:
+    repoURL: file:///tmp/app-hook
+    targetRevision: HEAD
+    path: '.'
+    directory:
+      include: 'cm.yaml'
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
