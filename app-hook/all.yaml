@@ -1,7 +1,16 @@
-apiVersion: v1
-kind: ConfigMap
+apiVersion: argoproj.io/v1alpha1
+kind: Application
 metadata:
-  name: hello
+  name: app-with-hook
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/alexmt/argocd-example-apps
+    targetRevision: HEAD
+    path: '.'
+  destination:
+    name: in-cluster
+    namespace: argocd
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -19,5 +28,5 @@ spec:
     directory:
       include: 'cm.yaml'
   destination:
-    server: https://kubernetes.default.svc
-    namespace: argocd
+    name: akp-001-dev-usw2
+    namespace: default
