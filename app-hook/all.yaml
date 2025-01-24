@@ -7,7 +7,7 @@ spec:
   source:
     repoURL: https://github.com/alexmt/argocd-example-apps
     targetRevision: HEAD
-    path: '.'
+    path: 'app-hook'
   destination:
     name: in-cluster
     namespace: argocd
@@ -24,7 +24,7 @@ spec:
   source:
     repoURL: file:///tmp/app-hook
     targetRevision: HEAD
-    path: '.'
+    path: 'app-hook'
     directory:
       include: 'cm.yaml'
   destination:
