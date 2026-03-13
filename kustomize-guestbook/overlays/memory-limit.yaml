@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: guestbook-ui
+spec:
+  template:
+    spec:
+      containers:
+      - name: guestbook-ui
+        resources:
+          limits:
+            memory: 100Mi
