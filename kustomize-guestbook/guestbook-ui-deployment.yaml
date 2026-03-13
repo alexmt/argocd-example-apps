@@ -16,5 +16,8 @@ spec:
       containers:
         - image: gcr.io/google-samples/gb-frontend:v5
           name: guestbook-ui
+          resources:
+            limits:
+              memory: 100Mi
           ports:
             - containerPort: 80
