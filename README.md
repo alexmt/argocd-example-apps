@@ -1,5 +1,5 @@
 test1
-
+3
 # Argo CD Example Apps
 
 This repository contains example applications for demoing Argo CD functionality. Feel free
